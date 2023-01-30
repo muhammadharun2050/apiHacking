@@ -7,6 +7,7 @@ amass intel -d <target domain> –whois
 amass intel -addr <target IP addresses>
 amass enum -active -brute -w /usr/share/wordlists/API_superlist -d <target domain> -dir [directory name]
 gobuster dir -u http://192.168.195.132:8000 -w /home/hapihacker/api/wordlists/common_apis_160
+
 # static/js/resource .............. here you find api
 "postman" learn this tools commadline
 
