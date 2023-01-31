@@ -1,0 +1,15 @@
+# kiterunner   //for api end point finder (kali tools)
+# nikto -h https://example.com     //for vulnerablity scanning
+# zap  //for scanning
+# wfuzz  // fuzzing
+        wfuzz options -z payload,params url
+        wfuzz -z file,/usr/share/wordlists/list.txt http://targetname.com/FUZZ
+        wfuzz -X POST -z list,admin-dashboard-docs-api-test http://targetname.com/FUZZ
+        wfuzz -z file,/usr/share/wordlists/list.txt –sc 200 http://targetname.com/FUZZ
+        wfuzz -z file,/usr/share/wordlists/list.txt –sc 404 –sh 950 http://targetname.com/FUZZ
+#Arju (kali tools)  //for  http parem discover
+        cd /opt/
+        sudo git clone https://github.com/s0med3v/Arjun.git
+        python3 /opt/Arjun/arjun.py -u http://target_address.com
+        python3 /opt/Arjun/arjun.py -u http://target_address.com -o arjun_results.json
+        python3 /opt/Arjun/arjun.py -i burp_targets.txt

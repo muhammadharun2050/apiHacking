@@ -1,0 +1,36 @@
+                        scanning
+                        ___________
+    {If the API is for select customers or internal use, you’ll have to rely 
+    on other clues: naming conventions, HTTP response header information 
+    such as Content-Type: application/json, HTTP responses containing JSON/
+    XML, and information about the JavaScript source files that power the 
+    application.}
+                            Google Hacking Query
+inurl:"/wp-json/wp/v2/users"
+intitle:"index.of" intext:"api.txt"
+nurl:"/includes/api/" intext:"index of /"
+ext:php inurl:"api.php?action="
+https://www.programmableweb.com/    //this give me api information
+        https://rapidapi.com and        //this give me api information
+        https://apis.guru/browse-apis    //this give me api information
+
+# Shodan Query Parameters //first go shodan website then search below this Query
+        hostname:"targetname.com"
+         "example.com"  "content-type: application/json"
+         "example.com" "content-type: application/xml"
+         "example.com" "200 OK"
+         "example.com" "wp-json"
+
+#OWASP Amass is a command line tool that can 
+map a target’s external network by collecting OSINT from over 55 different sources. Command below
+
+            amass enum -passive -d twitter.com |grep api   //for api findout
+            amass intel -addr <target IP addresses>  //itel command use find ssl certificate
+            amass intel -d <target domain> –whois  //find domain reserve lookup
+            amass enum -passive -d <target domain>
+            amass enum -acative -d <target domain>
+            amass enum -active -brute -w /usr/share/wordlists/API_superlist -d <target domain> -dir (directory)
+GitHub for OSINT could reveal your target’s API capabilities, documentation, and secrets, such as admin-level API keys, passwords, and tokens, 
+which could be useful during an attack.
+
+#see source code on github ypur terget . try find admin naame, api key, README.md File etc.

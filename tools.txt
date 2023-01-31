@@ -20,3 +20,7 @@ https://dev.example.com/docs
 https://developer.example.com/docs
 https://api.example.com/docs
 https://example.com/developers/documentation
+
+                discovering end point 
+                _____________________
+# kiterunner (kali tools)
