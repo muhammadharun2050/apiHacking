@@ -1,6 +1,6 @@
 # kiterunner   //for api end point finder (kali tools)
 # nikto -h https://example.com     //for vulnerablity scanning
-# zap  //for scanning
+# zap  //for scanninning and search "api" on history
 # wfuzz  // fuzzing
         wfuzz options -z payload,params url
         wfuzz -z file,/usr/share/wordlists/list.txt http://targetname.com/FUZZ

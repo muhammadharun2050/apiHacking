@@ -34,3 +34,10 @@ GitHub for OSINT could reveal your target’s API capabilities, documentation, a
 which could be useful during an attack.
 
 #see source code on github ypur terget . try find admin naame, api key, README.md File etc.
+## Try searching for terms using the common API path terms, like “api,” “v1,” “v2,” “swagger,” “rest,” and “dev.”
+# there  you find many api list (https://wordlists.assetnote.io/) brute for wordlists
+# Brute-Forcing URIs with Gobuster
+                gobuster dir -u http://192.168.195.132:8000 -w /home/hapihacker/api/wordlists/common_apis_160
+#Discovering API Content with Kiterunner
+                kiterunner (kali tools)
+#

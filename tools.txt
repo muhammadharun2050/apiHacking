@@ -1,11 +1,6 @@
                                             scanning api                                                
 "Dns drumper" and "Amass"for show raleted all host and targret domain name
-"Pastehunter" to find exposed sensitive information
-amass enum -passive -d twitter.com |grep api
-amass enum -active -d <target domain>
-amass intel -d <target domain> –whois
-amass intel -addr <target IP addresses>
-amass enum -active -brute -w /usr/share/wordlists/API_superlist -d <target domain> -dir [directory name]
+"Pastehunter" to find exposed sensitive informatio
 gobuster dir -u http://192.168.195.132:8000 -w /home/hapihacker/api/wordlists/common_apis_160
 
 # static/js/resource .............. here you find api
@@ -20,7 +15,3 @@ https://dev.example.com/docs
 https://developer.example.com/docs
 https://api.example.com/docs
 https://example.com/developers/documentation
-
-                discovering end point 
-                _____________________
-# kiterunner (kali tools)
