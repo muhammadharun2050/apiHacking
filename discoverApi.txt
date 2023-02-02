@@ -38,6 +38,42 @@ which could be useful during an attack.
 # there  you find many api list (https://wordlists.assetnote.io/) brute for wordlists
 # Brute-Forcing URIs with Gobuster
                 gobuster dir -u http://192.168.195.132:8000 -w /home/hapihacker/api/wordlists/common_apis_160
-#Discovering API Content with Kiterunner
-                kiterunner (kali tools)
-#
+#Discovering API endpoint Content with Kiterunner
+        kiterunner (kali tools)
+        kr scan http://192.168.195.132:8090 -w ~/api/wordlists/data/kiterunner/routes-large.kite
+        kr brute <target> -w ~/api/wordlists/data/automated/nameofwordlist.txt
+        download kr api wordlists their site
+
+                                        # blackbox testing 
+nmap -sc -sC -oA/oX/oN ip
+
+
+_________________________________________________________________________________________________
+
+                                        Api end point analysis
+
+#Finding Information in Documentation
+                https://github.com/hAPI-hacker/Hacking-APIs // here a wordlsit find api documentation
+                https://example.com/docs
+                https://example.com/api/docs
+                https://docs.example.com7
+                https://dev.example.com/docs
+                https://developer.example.com/docs
+                https://api.example.com/docs
+                https://example.com/developers/documentation
+        still if you can not find api documentation use those technique
+        1.google dork
+        2. https://web.archive.org/  //use web archive
+        3.try social enginirerring
+example of api look like :    -> : or {} [] <> ।।
+
+                /user/:id
+                /user/{id}
+                /user/2727
+                /account/:username
+                /account/{username}
+                /account/scuttleph1sh
+                /api/v1/user?find=[name] 
+                “blue” || “green” || “red”
+
+_________________________________________________________________________________________________
