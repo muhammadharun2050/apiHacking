@@ -113,4 +113,12 @@ This chapter will guide you through classic authentication attacks like brute-fo
                         \"is_admin\": \"FUZZ\",
                         \"account_balance\": \"FUZZ\"
                         }" -u http://192.168.195.132:8090/api/user/edit_inf
-note: page-250
+note: page-250 //most important
+                        
+                        *Exploit section*
+#A-B Testing for BOLA:
+                 >Create resources as UserA.
+                 >Swap out your UserA token for another user’s token.
+                 >Using UserB’s token, make the request for UserA’s resources.
+#Side-Channel BOLA/Discloser
+                
