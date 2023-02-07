@@ -113,3 +113,4 @@ This chapter will guide you through classic authentication attacks like brute-fo
                         \"is_admin\": \"FUZZ\",
                         \"account_balance\": \"FUZZ\"
                         }" -u http://192.168.195.132:8090/api/user/edit_inf
+note: page-250
