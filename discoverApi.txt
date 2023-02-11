@@ -164,4 +164,32 @@ sqlmap:
         web shell and execute the shell to grant you with system access:
         sqlmap -r /home/hapihacker/burprequest1 -p vuln-param –os-shell
         sqlmap -r /home/hapihacker/burprequest1 -p vuln-param –os-pwn //it alternative above command
-        
+# path bypass:
+        POST /api/myprofile%00
+        POST /api/myprofile%20
+        POST /api/myProfile
+        POST /api/MyProfile
+        POST /api/my-profile
+# Origin Header Spoofing
+        X-Forwarded-For  // use local ip 
+        X-Forwarded-Host
+        X-Host
+        X-Originating-IP
+        X-Remote-IP
+        X-Client-IP
+        X-Remote-Addr
+        user agent seclist //https://github.com/danielmiessler/SecLists/blob/master/Fuzzing/User-Agents/UserAgents.fuzz.txt). 
+#Rotating IP Addresses in Burp Suite  //rotating ip is burp extension -it use bypass ip block
+         pip3 install boto3 //or  go jython website and install 
+
+# GrasQL api test: 
+        namp -sV -sC ip //
+        nikto -h ip:port  //after finding nmap scan resurlt port, use here -example
+        nikto -h 127.0.0.1:8080
+        bruteforce end point GrapQL
+# inQL burp extension // for grapQL check
+
+
+
+
+
